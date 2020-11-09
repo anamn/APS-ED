@@ -9,17 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Arquivo {
-
-	public void setArquivo(List<Integer> lista, String nome) throws IOException {
+	
+	public void setArquivo(Base base, String nome) throws IOException {
 		FileWriter arq = new FileWriter("C:\\temp\\" + nome + ".txt");
 		PrintWriter gravarArq = new PrintWriter(arq);
-		for (Integer integer : lista) {
+		for (Integer integer : base.getLista()) {
 			gravarArq.printf(integer + ",");
 		}
 		arq.close();
 	}
 
-	public List<Integer> getArquivo(String nome) throws IOException {
+	public Base getArquivo(String nome) throws IOException {
+		Base base= new Base();
 		FileReader file = new FileReader("C:\\temp\\" + nome + ".txt");
 		BufferedReader le = new BufferedReader(file);
 		String line;
@@ -32,7 +33,8 @@ public class Arquivo {
 			numeros.add(Integer.valueOf(num));
 		}
 		le.close();
-		return numeros;
+		base.setLista(numeros);
+		return base;
 
 	}
 }

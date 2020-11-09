@@ -10,7 +10,7 @@ public class Principal {
 		Arquivo arq = new Arquivo();
 		Base base = new Base();
 		base.geraLista();
-		arq.setArquivo(base.getLista(), "numAntes");
+		arq.setArquivo(base, "numAntes");
 		//adiciona o metodo de ordenaçao usando o getList da base e adiciona dnv nabase com o setList
 		arq.getArquivo("numAntes");
 	}
