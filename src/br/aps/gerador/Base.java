@@ -9,7 +9,7 @@ public class Base {
 	private List<Integer> lista = new ArrayList<>();
 
 	public List<Integer> geraLista() {
-		for (int i = 0; i <= 20000; i++) {
+		for (int i = 0; i <= 10000; i++) {
 			Random numero = new Random();
 			lista.add(numero.nextInt(3000));
 		}
