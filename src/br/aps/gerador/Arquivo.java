@@ -11,7 +11,7 @@ import java.util.List;
 public class Arquivo {
 	
 	public void setArquivo(Base base, String nome) throws IOException {
-		FileWriter arq = new FileWriter("C:\\temp\\" + nome + ".txt");
+		FileWriter arq = new FileWriter("C:\\Users\\Doug\\Desktop\\" + nome + ".txt");
 		PrintWriter gravarArq = new PrintWriter(arq);
 		for (Integer integer : base.getLista()) {
 			gravarArq.printf(integer + ",");
@@ -21,7 +21,7 @@ public class Arquivo {
 
 	public Base getArquivo(String nome) throws IOException {
 		Base base= new Base();
-		FileReader file = new FileReader("C:\\temp\\" + nome + ".txt");
+		FileReader file = new FileReader("C:\\Users\\Doug\\Desktop\\" + nome + ".txt");
 		BufferedReader le = new BufferedReader(file);
 		String line;
 		String[] numStr = new String[10];
