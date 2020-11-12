@@ -10,7 +10,7 @@ public class Principal {
 		Arquivo arq = new Arquivo();
 		Base base = new Base();
 		base.geraLista();
-		arq.setArquivo(base, "numAntes");
+		arq.setArquivo(base, "blble");
 		arq.getArquivo("numAntes");
 	}
 }

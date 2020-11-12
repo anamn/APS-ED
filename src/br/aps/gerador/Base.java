@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Base {
 
-	private Integer lista[];
+	private Integer[] lista= new Integer[10001];
 
 	public Integer[] geraLista() {
 		for (int i = 0; i <= 10000; i++) {
