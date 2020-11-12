@@ -1,26 +1,24 @@
 package br.aps.gerador;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Base {
 
-	private List<Integer> lista = new ArrayList<>();
+	private Integer lista[];
 
-	public List<Integer> geraLista() {
+	public Integer[] geraLista() {
 		for (int i = 0; i <= 10000; i++) {
 			Random numero = new Random();
-			lista.add(numero.nextInt(3000));
+			lista[i] = numero.nextInt(3000);
 		}
 		return lista;
 	}
 
-	public void setLista(List<Integer> lista) {
+	public void setLista(Integer[] lista) {
 		this.lista = lista;
 	}
 
-	public List<Integer> getLista() {
+	public Integer[] getLista() {
 		return lista;
 	}
 

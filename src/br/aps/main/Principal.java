@@ -11,7 +11,6 @@ public class Principal {
 		Base base = new Base();
 		base.geraLista();
 		arq.setArquivo(base, "numAntes");
-		//adiciona o metodo de ordenaçao usando o getList da base e adiciona dnv nabase com o setList
 		arq.getArquivo("numAntes");
 	}
 }
