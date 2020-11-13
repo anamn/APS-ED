@@ -1,16 +1,14 @@
 package br.aps.ordenacao;
 
-import br.aps.timer.Timer;
 
 public class Insertion {
+
 
 	public Insertion() {
 		InsertionSort(null);
 	}
 
 	public static Integer[] InsertionSort(Integer[] vetor) {
-		Timer timer = new Timer();
-		timer.start();
 		int i;
 		int j;
 		int pivo;
@@ -22,8 +20,8 @@ public class Insertion {
 			}
 			vetor[i + 1] = pivo;
 		}
-		timer.end("Insertion Sort");
 		return vetor;
+		
 	}
 
 }

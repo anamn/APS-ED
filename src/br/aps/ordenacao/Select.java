@@ -11,8 +11,6 @@ public class Select {
 	}
 
 	public static Integer[] selectionSort(Integer[] array) {
-		Timer timer = new Timer();
-		timer.start();
 		for (int pivo = 0; pivo < array.length - 1; pivo++) {
 			int j = pivo;
 
@@ -27,7 +25,6 @@ public class Select {
 				array[j] = k;
 			}
 		}
-		timer.end("Selection Sort");
 		return array;
 	}
 

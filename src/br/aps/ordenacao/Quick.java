@@ -1,5 +1,6 @@
 package br.aps.ordenacao;
 
+
 public class Quick {
 
 	public Quick() {
