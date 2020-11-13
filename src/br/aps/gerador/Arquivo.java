@@ -28,10 +28,10 @@ public class Arquivo {
 		}
 
 		Integer[] numeros = new Integer[10001];
+		int i = 0;
 		for (String num : numStr) {
-			for (int i = 0; i <= 10000; i++) {
-				numeros[i] = Integer.valueOf(num);
-			}
+			numeros[i] = Integer.valueOf(num);
+			i++;
 		}
 		le.close();
 		base.setLista(numeros);

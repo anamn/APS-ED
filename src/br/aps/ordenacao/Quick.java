@@ -1,22 +1,17 @@
 package br.aps.ordenacao;
 
-import br.aps.timer.Timer;
-
 public class Quick {
 
 	public Quick() {
 		QuickSort(null, 0, 0);
 	}
 
-	private static Integer[] QuickSort(Integer[] vetor, int inicio, int fim) {
-		Timer timer = new Timer();
-		timer.start();
+	public static Integer[] QuickSort(Integer[] vetor, int inicio, int fim) {
 		if (inicio < fim) {
 			int pPivo = separar(vetor, inicio, fim);
 			QuickSort(vetor, inicio, pPivo - 1);
 			QuickSort(vetor, pPivo + 1, fim);
 		}
-		timer.end("Quick Sort");
 		return vetor;
 	}
 
