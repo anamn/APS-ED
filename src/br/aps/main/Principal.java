@@ -83,7 +83,7 @@ public class Principal {
 		System.out.println("--------------------------------------------------");
 
 		// lista cm 75% dos dados ordenados
-		System.out.println("Listas 75% aleatorias");
+		System.out.println("Listas 75% ordenada");
 		// Insertion Sort
 		timer.start();
 		base.setLista(Insertion.InsertionSort(base.geraLista75()));
