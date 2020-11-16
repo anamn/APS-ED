@@ -17,20 +17,14 @@ public class Principal {
 
 		base.geraLista();
 		arq.setArquivo(base, "arquivoBase");
-		arq.getArquivo("arquivoBase");
 
+		// Listas aleatorias externas 
 		// Insertion Sort
+		System.out.println("Listas aleatorias externas");
 		timer.start();
-		base.setLista(Insertion.InsertionSort(arq.getArquivo("arquivoBase").getLista()));//Primeiro ordenamento
+		base.setLista(Insertion.InsertionSort(arq.getArquivo("arquivoBase").getLista()));// Primeiro ordenamento
 		timer.end("1º Insertion Sort");
 		arq.setArquivo(base, "ordenacaoInsertionArquivo");
-		
-		base.geraLista();
-		timer.start();
-		base.setLista(Insertion.InsertionSort(base.getLista()));//segundo ordenamento
-		timer.end("2º Insertion Sort");
-		arq.setArquivo(base, "ordenacaoInsertionRandom");
-		System.out.println("--------------------------------------------------");
 		
 		// Quick Sort
 		timer.start();
@@ -38,24 +32,76 @@ public class Principal {
 		timer.end("1º Quick Sort");
 		arq.setArquivo(base, "ordenacaoQuickArquivo");
 		
-		base.geraLista();
-		timer.start();
-		base.setLista(Quick.QuickSort(base.getLista(), 0, 3000));
-		timer.end("2º Quick Sort");
-		arq.setArquivo(base, "ordenacaoQuickRandom");
-		System.out.println("--------------------------------------------------");
-		
 		// Select Sort
 		timer.start();
 		base.setLista(Select.selectionSort(arq.getArquivo("arquivoBase").getLista()));
 		timer.end("1º Selection Sort");
 		arq.setArquivo(base, "ordenacaoSelectionArquivo");
+		System.out.println("--------------------------------------------------");
 		
-		base.geraLista();
+		// Listas aleatorias internas
+		System.out.println("Listas aleatorias internas");
+		// Insertion Sort
 		timer.start();
-		base.setLista(Select.selectionSort(base.getLista()));
+		base.setLista(Insertion.InsertionSort(base.geraLista()));// segundo ordenamento
+		timer.end("2º Insertion Sort");
+		arq.setArquivo(base, "ordenacaoInsertionRandom");
+		
+		// Quick Sort
+		timer.start();
+		base.setLista(Quick.QuickSort(base.geraLista(), 0, 3000));
+		timer.end("2º Quick Sort");
+		arq.setArquivo(base, "ordenacaoQuickRandom");
+		
+		// Select Sort
+		timer.start();
+		base.setLista(Select.selectionSort(base.geraLista()));
 		timer.end("2º Selection Sort");
 		arq.setArquivo(base, "ordenacaoSelectionRandom");
 		System.out.println("--------------------------------------------------");
+		
+		
+		// lista cm 50% dos dados ordenados
+		System.out.println("Listas 50% aleatorias");
+		// Insertion Sort
+		timer.start();
+		base.setLista(Insertion.InsertionSort(base.geraLista50()));
+		timer.end("3º Insertion Sort");
+		arq.setArquivo(base, "ordenacaoInsertion50");
+
+		// Quick Sort
+		timer.start();
+		base.setLista(Quick.QuickSort(base.geraLista50(), 0, 3000));
+		timer.end("3º Quick Sort");
+		arq.setArquivo(base, "ordenacaoQuick50");
+
+		// Select Sort
+		timer.start();
+		base.setLista(Select.selectionSort(base.geraLista50()));
+		timer.end("3º Selection Sort");
+		arq.setArquivo(base, "ordenacaoSelection50");
+		System.out.println("--------------------------------------------------");
+
+		// lista cm 75% dos dados ordenados
+		System.out.println("Listas 75% aleatorias");
+		// Insertion Sort
+		timer.start();
+		base.setLista(Insertion.InsertionSort(base.geraLista75()));
+		timer.end("4º Insertion Sort");
+		arq.setArquivo(base, "ordenacaoInsertion75");
+
+		// Quick Sort
+		timer.start();
+		base.setLista(Quick.QuickSort(base.geraLista75(), 0, 3000));
+		timer.end("4º Quick Sort");
+		arq.setArquivo(base, "ordenacaoQuick75");
+
+		// Select Sort
+		timer.start();
+		base.setLista(Select.selectionSort(base.geraLista75()));
+		timer.end("4º Selection Sort");
+		arq.setArquivo(base, "ordenacaoSelection75");
+		System.out.println("--------------------------------------------------");
+
 	}
 }
